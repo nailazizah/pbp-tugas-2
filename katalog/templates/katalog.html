@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
- {% block content %}
+{% block content %}
 
   <h1>Lab 1 Assignment PBP/PBD</h1>
 
   <h5>Name: </h5>
+     <b>{{nama}}</b>
   <p>Fill me!</p>
 
   <h5>Student ID: </h5>
+     <b>{{studentid}}</b>
   <p>Fill me!</p>
 
   <table>
@@ -20,6 +22,18 @@
       <th>Item URL</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
+    {% for catalogitem in list_barang %}
+    <tr>
+        <th>{{catalogitem.item_name}}</th>
+        <th>{{catalogitem.item_price}}</th>
+        <th>{{catalogitem.item_stock}}</th>
+        <th>{{catalogitem.rating}}</th>
+        <th>{{catalogitem.description}}</th>
+        <th>{{catalogitem.item_url}}</th>
+    </tr>
+    {% endfor %}
   </table>
 
  {% endblock content %}
+
+
