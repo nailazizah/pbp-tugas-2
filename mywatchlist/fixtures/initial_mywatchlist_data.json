@@ -1,0 +1,112 @@
+[
+  {
+    "model":"mywatchlist.mywatchlist",
+    "pk":1,
+    "fields":{
+      "watched":"Yes",
+      "title":"Everything Everywhere All At Once",
+      "rating": 3,
+      "release_date": "22 June 2022",
+      "review": "Great cast, great representation, great plot. Not as sad as I thought it would be"
+    }
+  },
+  {
+    "model":"mywatchlist.mywatchlist",
+    "pk":2,
+    "fields":{
+      "watched":"Yes",
+      "title":"Parasite",
+      "rating": 4,
+      "release_date": "21 June 2019",
+      "review": "Great plot. Good cinematography."
+    }
+  },
+  {
+    "model":"mywatchlist.mywatchlist",
+    "pk":3,
+    "fields":{
+      "watched":"Yes",
+      "title":"Paddington",
+      "rating": 4,
+      "release_date": "20 December 2014",
+      "review": "Emotional and heartwarming"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 4,
+    "fields": {
+      "watched": "Yes",
+      "title": "Spiderman: No Way Home",
+      "rating": 5,
+      "release_date": "15 December 2021",
+      "review": "So much fun. So nostalgic."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 5,
+    "fields": {
+      "watched": "Yes",
+      "title": "Spirited Away",
+      "rating": 4,
+      "release_date": "20 July 2001",
+      "review": "Beautiful classic movie with a great message"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 6,
+    "fields": {
+      "watched": "Yes",
+      "title": "Lady Bird",
+      "rating": 3,
+      "release_date": "28 February 2018",
+      "review": "Relatable and warm coming of age movie"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 7,
+    "fields": {
+      "watched": "Yes",
+      "title": "Coco",
+      "rating": 4,
+      "release_date": "22 November 2017",
+      "review": "Good comfort movie that will make you cry"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 8,
+    "fields": {
+      "watched": "Yes",
+      "title": "Hannah Montana The Movie",
+      "rating": 4,
+      "release_date": "8 July 2009",
+      "review": "bagus bgt omg"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 9,
+    "fields": {
+      "watched": "Yes",
+      "title": "The Hunger Games: Catching Fire",
+      "rating": 5,
+      "release_date": "22 Januari 2013",
+      "review": "Excellent acting. Great plot and a good adaptation of the book"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 10,
+    "fields": {
+      "watched": "Yes",
+      "title": "Harry Potter and the Goblet of Fire",
+      "rating": 5,
+      "release_date": "18 November 2005",
+      "review": "One of the best Harry Potter movies. Fun and nostalgic."
+    }
+  }
+]
