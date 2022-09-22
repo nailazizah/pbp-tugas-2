@@ -1,9 +1,13 @@
 Nama: Naila Azizah
+
 NPM: 2106705814
 
 Link aplikasi html: https://pbp-tugas2-katalog.herokuapp.com/mywatchlist/html/ 
+
 Link aplikasi xml: https://pbp-tugas2-katalog.herokuapp.com/mywatchlist/xml/ 
+
 Link aplikasi json: https://pbp-tugas2-katalog.herokuapp.com/mywatchlist/json/ 
+
 
 - Jelaskan perbedaan antara JSON, XML, dan HTML!
 1. Definisi
@@ -71,15 +75,16 @@ karena pada tugas sebelumnya directory ini sudah di deploy ke heroku, jika file 
 - membuat account PostMan
 - mengirimkan url heroku HTML, JSON, dan XML di PostMan
 8. Menambahkan unit test pada tests.py untuk menguji bahwa tiga URL di poin 6 dapat mengembalikan respon HTTP 200 OK sebagai berikut;
-<img width="1111" alt="Screen Shot 2022-09-21 at 12 44 10" src="https://user-images.githubusercontent.com/101708935/191656510-f170dab![Uploading Screen Shot 2022-09-21 <img width="1111" alt="Screen Shot 2022-09-21 at 12 44 42" src="https://user-images.githubusercontent.com/101708935/191656543-005ad91b-fdeb-4ed5-8b4e-89dee0fd4b52.png">
-at 12.44.26.png…]()
-0-764c-46e3-9354-36e00418fc4c.png">
-
    class test_url(TestCase):
 
    def test_url_html(self):
 
    response = Client().get('http://localhost:8000/mywatchlist/html/')
    self.assertEqual(response.status_code, 200)
+  
 
-
+  Berikut bukti dari tests.py
+  
+<img width="1111" alt="Screen Shot 2022-09-21 at 12 44 42" src="https://user-images.githubusercontent.com/101708935/191656816-4fa01bd1-d674-4e82-8efd-c035fe11eaad.png">
+<img width="1111" alt="Screen Shot 2022-09-21 at 12 44 26" src="https://user-images.githubusercontent.com/101708935/191656831-2f93ae2b-490e-454e-a5d6-7affaf3b3cae.png">
+<img width="1111" alt="Screen Shot 2022-09-21 at 12 44 10" src="https://user-images.githubusercontent.com/101708935/191656841-eb144e80-cc01-479b-84db-80f6e1466aac.png">
