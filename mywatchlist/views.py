@@ -14,9 +14,11 @@ def mywatchlist(request):
     }
     return render(request, 'mywatchlist.html', context)
 
+
 def show_xml(request):
     data = MyWatchList.objects.all()
     return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
 
 def show_json(request):
     data = MyWatchList.objects.all()
