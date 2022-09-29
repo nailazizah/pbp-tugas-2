@@ -19,7 +19,7 @@ CSRF yaitu Cross-Site Request Forgery. Kegunaan dari token ini adalah untuk meng
 Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
 
 Ya, kita dapat membuat elemen <form> secara manual. Salah satu cara lain untuk membuat form dalam aplikasi adalah dengan cara manual, sebagai berikut;
-
+   <img width="598" alt="Screen Shot 2022-09-29 at 09 05 07" src="https://user-images.githubusercontent.com/101708935/192922091-5242ffd3-afe8-4988-893b-a21866b2243a.png">
 
 3. Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, 
 penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
@@ -74,7 +74,7 @@ penyimpanan data pada database, hingga munculnya data yang telah disimpan pada t
 
 - Membuat routing sehingga beberapa fungsi dapat diakses melalui URL
 : diimplementasikan dengan menambahkan path, dan menjalankan python2 manage.py runserver
-   
+
 - Melakukan deployment ke Heroku terhadap aplikasi yang sudah kamu buat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
 : karena pada tugas sebelumnya directory ini sudah di deploy ke heroku, jika file ini di push ke github, heroku akan terupdate dengan aplikasi todolist
 
