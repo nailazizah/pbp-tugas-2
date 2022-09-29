@@ -44,7 +44,8 @@ def login_user(request):
         if user is not None:
             login(request, user)  # melakukan login terlebih dahulu
             response = HttpResponseRedirect(reverse('todolist:todolist'))  # membuat response
-            response.set_cookie('last_login', str(datetime.datetime.now()))  # membuat cookie last_login dan menambahkannya ke dalam response
+            response.set_cookie('last_login',
+                                str(datetime.datetime.now()))  # membuat cookie last_login dan menambahkannya ke dalam response
             return response
         else:
             messages.info(request, 'Username atau password tidak tepat')
@@ -66,7 +67,7 @@ def add_todo(request):
         title = request.POST.get('title')
         description = request.POST.get('description')
         # bonus
-        # status = False
+        # is_finished = False
         Task.objects.create(user=username, date=date, title=title, description=description)
         response = HttpResponseRedirect(reverse("todolist:todolist"))
         return response

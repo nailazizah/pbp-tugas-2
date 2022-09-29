@@ -6,7 +6,7 @@ NPM: 2106705814
 
 Kelas: PBP F
 
-link aplikasi todolist: 
+link aplikasi todolist: https://pbp-tugas2-katalog.herokuapp.com/todolist/login/?next=/todolist/ 
 
 1. Apa kegunaan {% csrf_token %} pada elemen <form>? 
 Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
