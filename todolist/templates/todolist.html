@@ -22,13 +22,29 @@
             <th>Date</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Status</th>
+            <th>Change Status</th>
+            <th>Delete</th>
         </tr>
 
-        {% for todo in list_todolist %}
+        {% for todo in list_todo %}
         <tr>
             <th>{{todo.date}}</th>
             <th>{{todo.title}}</th>
             <th>{{todo.description}}</th>
+            <th>
+                {% if todo.is_finished %}
+                Finished
+                {% else %}
+                Not Finished
+                {% endif %}
+            </th>
+            <th>
+                <button><a href="{% url 'todolist:change_status' todo.id %}">Change Status</a></button>
+            </th>
+            <th>
+                <button><a href="{% url 'todolist:delete' todo.id %}">Delete Task</a></button>
+        </th>
         </tr>
         {% endfor %}
     </table>

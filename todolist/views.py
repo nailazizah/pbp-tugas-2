@@ -16,7 +16,7 @@ def todolist(request):
     data_todolist = Task.objects.filter(user=request.user)
 
     context = {
-        'list_todolist': data_todolist,
+        'list_todo': data_todolist,
         'username': request.user.username,
     }
     return render(request, "todolist.html", context)
@@ -67,9 +67,21 @@ def add_todo(request):
         title = request.POST.get('title')
         description = request.POST.get('description')
         # bonus
-        # is_finished = False
-        Task.objects.create(user=username, date=date, title=title, description=description)
+        is_finished = False
+        Task.objects.create(user=username, date=date, title=title, description=description, is_finished=is_finished)
         response = HttpResponseRedirect(reverse("todolist:todolist"))
         return response
 
     return render(request, "add_todo.html")
+
+
+def change_status(request, pk):
+    data_todo = Task.objects.get(id=pk)
+    data_todo.is_finished = not data_todo.is_finished
+    data_todo.save()
+    return redirect('todolist:todolist')
+
+
+def delete(request, pk):
+    Task.objects.filter(id=pk).delete()
+    return redirect('todolist:todolist')
