@@ -16,7 +16,7 @@ Link aplikasi json: https://pbp-tugas2-katalog.herokuapp.com/mywatchlist/json/
    - HTML (Hyper Markup Text Language): bahasa yang menggunakan tag untuk menyatakan kode-kode yang harus ditafsirkan oleh browser.
 
 2. Penyimpanan Data
-   - XML: disimpan sebagai struktur phon atau tree structure
+   - XML: disimpan sebagai struktur pohon atau tree structure
    - JSON: disimpan sebagai map dengan pasangan key dan value
    - HTML: data disimpan secara lokal menggunakan cookies. HTML memiliki localStorage dan sessionStorage
 

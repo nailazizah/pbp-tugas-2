@@ -1,52 +1,73 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> My To Do List ☆</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
 
-{% block meta %}
-    <title>To Do List</title>
-{% endblock meta %}
+<style>
+    body{
+        background: linear-gradient(to top, #FCFCFC 0%, #4D8EFF 100%);
+    }
 
-<button onclick="location.href='/todolist/add_todo'">Create New Task</button>
+    .card {
+        background: linear-gradient(to bottom, #F880E6 0%, #F9AEB6 50%);
+        border-radius: 30px;
+        box-shadow: 1px 1px 2px;
 
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    .card:hover{
+        transform: scale(1.1);
 
 
-{% block content %}
+    }
+    .card{
+        transition: transform .3s;
+    }
+    .container {
+        display: flex;
+    }
 
-    <h5>Username: </h5>
-    <p>{{username}}</p>
+</style>
 
-    <button> <a href="{%  url 'todolist:add_todo' %}">Add task</a></button>
-    <button> <a href="{%  url 'todolist:logout' %}">Logout</a></button>
+<div style="color: lightpink; text-align: center;">
+<h1>｡･:*:･ﾟ★,｡･:To Do List･:*:★,｡:･ﾟ☆</h1>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <button onclick="location.href='/todolist/addtodo'">Create New Task</button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+</div>
 
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Change Status</th>
-            <th>Delete</th>
-        </tr>
 
-        {% for todo in list_todo %}
-        <tr>
-            <th>{{todo.date}}</th>
-            <th>{{todo.title}}</th>
-            <th>{{todo.description}}</th>
-            <th>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for todo in list_todo %}
+        {#    <img src="..." class="card-img-top" alt="...">#}
+
+        <div class="card" style="width: 18rem; text-align: center;">
+            <div class="card-body">
+                <h5 class="card-title">{{todo.title}}</h5>
+                <p class="card-text">{{todo.description}}</p>
+                <p class="card-text">{{todo.date}}</p>
                 {% if todo.is_finished %}
-                Finished
+                    Finished
                 {% else %}
-                Not Finished
+                    Not Finished
                 {% endif %}
-            </th>
-            <th>
+{#                <a href="#" class="btn btn-primary"></a>#}
                 <button><a href="{% url 'todolist:change_status' todo.id %}">Change Status</a></button>
-            </th>
-            <th>
                 <button><a href="{% url 'todolist:delete' todo.id %}">Delete Task</a></button>
-        </th>
-        </tr>
-        {% endfor %}
-    </table>
+                {#        <a href="#" class="btn btn-primary">Go somewhere</a>#}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
 
-{% endblock content %}
+
+
+
+
+
