@@ -78,21 +78,24 @@ Contoh:
 
 
 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
-- 
-Checklist untuk tugas ini adalah sebagai berikut:
-
+-
 1. Kustomisasi templat HTML yang telah dibuat pada Tugas 4 dengan menggunakan CSS atau CSS framework (seperti Bootstrap, Tailwind, Bulma) dengan ketentuan sebagai berikut:
-
-
 2. Kustomisasi templat untuk halaman login, register, dan create-task semenarik mungkin.
 Kustomisasi halaman utama todo list menggunakan cards. (Satu card mengandung satu task).
 Membuat keempat halaman yang dikustomisasi menjadi responsive.
 
+Diimplementasikan dengan menambahkan bootstrap ke tiap halaman html
+```<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">```
+di bawah title
 
-3. Dokumentasi CSS menganai Media Query dapat diakses melalui tautan ini
+```<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>```
+di bawah header
 
+Untuk konstumisasi, dilakukan dengan menambahkan tag ```<style> </style``` berserta dengan selector-selectornya
 
-4. Menjawab beberapa pertanyaan berikut pada README.md pada folder todolist.
+Untuk membuat card,
 
+Lanjutkan dengan potongan kode yang sudah dibuat
 
-Referensi
+Untuk hover, tambahkan selector sebagai berikut di tag style
+
