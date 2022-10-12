@@ -1,8 +1,10 @@
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+
 from django.urls import reverse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
 from todolist.models import Task
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -10,6 +12,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 
+from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
+from django.core import serializers
 
 @login_required(login_url='/todolist/login/')
 def todolist(request):
@@ -60,7 +64,8 @@ def logout_user(request):
     return response
 
 
-def add_todo(request):
+@login_required(login_url='login/')
+def new_todo(request):
     if request.method == 'POST':
         username = request.user
         date = datetime.datetime.now()
@@ -74,14 +79,36 @@ def add_todo(request):
 
     return render(request, "add_todo.html")
 
+@csrf_exempt
+def add_todo(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        todo = Task.objects.create(user=request.user, date=datetime.date.today(), title=title, description=description,)
+        result = {
+            'fields': {
+                'title': todo.title,
+                'date': todo.date,
+                'description': todo.description,
+            },
+            'pk': todo.pk
+        }
+        return JsonResponse(result)
 
-def change_status(request, pk):
-    data_todo = Task.objects.get(id=pk)
-    data_todo.is_finished = not data_todo.is_finished
-    data_todo.save()
-    return redirect('todolist:todolist')
+
+def show_json(request):
+    model_todo = Task.objects.filter(user = request.user)
+    return HttpResponse(serializers.serialize("json", model_todo), content_type="application/json")
 
 
-def delete(request, pk):
-    Task.objects.filter(id=pk).delete()
-    return redirect('todolist:todolist')
+
+# def change_status(request, pk):
+#     data_todo = Task.objects.get(id=pk)
+#     data_todo.is_finished = not data_todo.is_finished
+#     data_todo.save()
+#     return redirect('todolist:todolist')
+
+
+# def delete(request, pk):
+#     Task.objects.filter(id=pk).delete()
+#     return redirect('todolist:todolist')
