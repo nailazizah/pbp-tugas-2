@@ -94,8 +94,11 @@ di bawah header
 Untuk konstumisasi, dilakukan dengan menambahkan tag ```<style> </style``` berserta dengan selector-selectornya
 
 Untuk membuat card,
-
+<img width="560" alt="Screen Shot 2022-10-06 at 11 35 28" src="https://user-images.githubusercontent.com/101708935/194215037-db5a8329-2aee-4b68-a058-6456b72eac0f.png">
 Lanjutkan dengan potongan kode yang sudah dibuat
 
 Untuk hover, tambahkan selector sebagai berikut di tag style
+<img width="546" alt="Screen Shot 2022-10-06 at 11 35 07" src="https://user-images.githubusercontent.com/101708935/194215060-fe25d398-3e6f-40ae-9e66-5d37e05dfec4.png">
+
+
 
