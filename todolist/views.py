@@ -97,7 +97,7 @@ def add_todo(request):
 
 
 def show_json(request):
-    model_todo = Task.objects.filter(user = request.user)
+    model_todo = Task.objects.filter(user=request.user)
     return HttpResponse(serializers.serialize("json", model_todo), content_type="application/json")
 
 

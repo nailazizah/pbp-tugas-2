@@ -107,13 +107,3 @@ $.post("/todolist/add/",{
           </div>
       </div>`)
 ```
-
-- Lakukan refresh pada halaman utama secara asinkronus untuk menampilkan list terbaru tanpa reload seluruh page. 
-
-diimplementasikan dengan menambahkan ```$('#title').val('')``` dan
-  ```$('#description').val('')``` di akhir script ajax. Arti potongan kode tersebut yaitu menjadikan text field menjadi berisi string kosong setelah addtodo
-
-Referensi
-https://community.algostudio.net/memahami-synchronous-dan-asynchronous-dalam-pemrograman/
-http://kuliahkaryawan.widyakartika.ac.id/IT/1-3077-2963/event-driven_8307_kuliahkaryawan-widyakartika.html
-https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-5 
