@@ -21,6 +21,7 @@
         background: linear-gradient(to bottom, #F880E6 0%, #F9AEB6 100%);
         border-radius: 30px;
         box-shadow: 1px 1px 2px;
+        position: center;
     }
 
     .card:hover{
@@ -40,7 +41,7 @@
         console.log(data)
         for (i=0; i < data.length; i++){
           $("#mylist").append(
-                  `<div class="row row-cols-1 row-cols-md-3 g-4">
+                  `<div class="col-sm-6 mb-3">
                       <div class="card" style="width: 18rem; text-align: center;">
                           <div class="card-body">
                               <h5 class="card-title">${data[i].fields.title}</h5>
@@ -58,8 +59,8 @@
         title: $('#title').val(),
         description: $('#description').val()}, 
         function (result){
-          $(".row-cols-lg-1").append(
-            `<div class="row row-cols-1 row-cols-md-3 g-4">
+          $(".row-cols-lg-4").append(
+            `<div class="col-sm-6 mb-3">
                     <div class="card" style="width: 18rem; text-align: center;">
                         <div class="card-body">
                             <h5 class="card-title">${result.fields.title}</h5>
@@ -88,7 +89,7 @@
 
 <br>
 
-<div class="row-cols-lg-1">
+<div class="row-cols-lg-4">
 
 </div>
 
@@ -118,6 +119,18 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class=".row-cols-lg-4">
+    {% for todo in list_todo %}
+        <div class="card" style="width: 18rem; text-align: center;">
+            <div class="card-body">
+                <h5 class="card-title">{{todo.title}}</h5>
+                <p class="card-text">{{todo.date}}</p>
+                <p class="card-text">{{todo.description}}</p>
+            </div>
+        </div>
+    {% endfor %}
 </div>
 
 
