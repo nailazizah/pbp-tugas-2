@@ -41,7 +41,7 @@
         console.log(data)
         for (i=0; i < data.length; i++){
           $("#mylist").append(
-                  `<div class="col-sm-6 mb-3">
+                  `<div class="col">
                       <div class="card" style="width: 18rem; text-align: center;">
                           <div class="card-body">
                               <h5 class="card-title">${data[i].fields.title}</h5>
@@ -59,8 +59,8 @@
         title: $('#title').val(),
         description: $('#description').val()}, 
         function (result){
-          $(".row-cols-lg-4").append(
-            `<div class="col-sm-6 mb-3">
+          $(".container").append(
+            `<div class="col">
                     <div class="card" style="width: 18rem; text-align: center;">
                         <div class="card-body">
                             <h5 class="card-title">${result.fields.title}</h5>
@@ -89,7 +89,8 @@
 
 <br>
 
-<div class="row-cols-lg-4">
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="card-body">
 
 </div>
 
@@ -121,7 +122,7 @@
   </div>
 </div>
 
-<div class=".row-cols-lg-4">
+<div class=".container">
     {% for todo in list_todo %}
         <div class="card" style="width: 18rem; text-align: center;">
             <div class="card-body">
